@@ -1,0 +1,16 @@
+{
+  "name": "test-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test-task.js",
+  "scripts": {
+    "test": "mocha test-task.spec.js",
+    "start": "node test-task.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^8.2.0"
+  }
+}

@@ -1,0 +1,65 @@
+should calc "daily" intakes
+
+ √ Test case 0.
+ Start date: Wed 22.04.2020 16:06
+ Params:
+ Intakes: [{"time":"01:54","pills":6},{"time":"04:57","pills":5},{"time":"23:57","pills":5}]
+ Stock: 4
+ Frequency: daily
+ Week days: null
+ Result: Wed 22.04.2020 23:57
+
+ √ Test case 1.
+ Start date: Wed 22.04.2020 16:06
+ Params:
+ Intakes: [{"time":"15:48","pills":2}]
+ Stock: 10
+ Frequency: daily
+ Week days: null
+ Result: Mon 27.04.2020 15:48
+
+
+
+should calc "eachOtherDay" intakes
+
+ √ Test case 0.
+ Start date: Wed 22.04.2020 16:06
+ Params:
+ Intakes: [{"time":"08:00","pills":5},{"time":"23:15","pills":1}]
+ Stock: 4
+ Frequency: eachOtherDay
+ Week days: null
+ Result: Fri 24.04.2020 08:00
+
+ √ Test case 1.
+ Start date: Wed 22.04.2020 16:06
+ Params:
+ Intakes: [{"time":"13:25","pills":6},{"time":"17:20","pills":6}]
+ Stock: 26
+ Frequency: eachOtherDay
+ Week days: null
+ Result: Sun 26.04.2020 17:20
+
+
+
+should calc "weekly" intakes
+
+ √ Test case 0.
+ Start date: Wed 22.04.2020 16:06
+ Params:
+ Intakes: [{"time":"13:16","pills":1},{"time":"23:55","pills":3}]
+ Stock: 64
+ Frequency: weekly
+ Week days:
+{"monday":true,"tuesday":false,"wednesday":false,"thursday":false,"friday":false,"saturday":false,"sunday":true}
+ Result: Mon 1tuesday5.06.2020 23:55
+
+ √ Test case 1.
+ Start date: Wed 22.04.2020 16:06
+ Params:
+ Intakes: [{"time":"02:57","pills":1},{"time":"12:54","pills":3}]
+ Stock: 84
+ Frequency: weekly
+ Week days:
+{"monday":true,"tuesday":true,"wednesday":true,"thursday":false,"friday":false,"saturday":false,"sunday":false}
+ Result: Wed 10.06.2020 12:54
